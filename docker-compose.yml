@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  web:
+    container_name: backendflask
+    build: .
+    ports:
+      - "5000:5000"
+  nginx:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: ./dockerfile
+    restart: always
+    ports:
+      - "80:80"
+
+
+  
