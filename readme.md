@@ -9,7 +9,7 @@
  venv\scripts\activate
  pip install -r requirements.txt
 
- $env:FLASK_APP = "app"
+ $env:FLASK_APP = "main"
  flask run
 
  cd web/client
@@ -25,7 +25,7 @@
 # off-top 
 ```
  docker build --tag flask_gunicorn_app .
- docker run --detach -p 80:8000 flask_gunicorn_app
+ docker run --detach -p 5000:5000 flask_gunicorn_app
 ```
 
 
