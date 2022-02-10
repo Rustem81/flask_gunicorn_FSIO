@@ -5,11 +5,14 @@ services:
     build: .
     ports:
       - "5000:5000"
+
   nginx:
-    container_name: web
+    container_name: nginx
     build:
-      context: ./web
+      context: ./nginx
       dockerfile: ./dockerfile
+    depends_on:
+            - backend  
     restart: always
     ports:
       - "80:80"
