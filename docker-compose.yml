@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  web:
+  backend:
     container_name: backendflask
     build: .
     ports:
